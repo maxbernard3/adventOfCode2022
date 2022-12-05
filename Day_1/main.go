@@ -8,8 +8,10 @@ import (
 )
 
 func main() {
-	result := puzzle2()
-	println(result)
+	result1 := puzzle1()
+	println(result1)
+	result2 := puzzle2()
+	println(result2)
 }
 
 func puzzle1() int {
