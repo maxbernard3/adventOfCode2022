@@ -5,8 +5,6 @@ import (
 	"os"
 )
 
-//262752, 293280
-
 func main() {
 	inList := loadList()
 
