@@ -22,10 +22,10 @@ func puzzle1(inList [][2]int) int {
 	T := [2]int{0, 0}
 
 	var posHistory [][2]int
+	posHistory = append(posHistory, T)
 
 	for _, tup := range inList {
 		for i := 0; i < tup[1]; i++ {
-			posHistory = checkHistory(posHistory, T)
 
 			switch tup[0] {
 			case 0:
@@ -39,6 +39,7 @@ func puzzle1(inList [][2]int) int {
 			}
 
 			T = stepT(T, H)
+			posHistory = checkHistory(posHistory, T)
 		}
 	}
 
@@ -87,6 +88,7 @@ func puzzle2(inList [][2]int) int {
 	var T [10][2]int
 
 	var posHistory [][2]int
+	posHistory = append(posHistory, T[9])
 
 	for _, tup := range inList {
 		for i := 0; i < tup[1]; i++ {
